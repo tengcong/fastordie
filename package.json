@@ -1,9 +1,13 @@
 {
   "name": "fastordie",
-  "description": "a online game",
-  "version": "3.0.3",
+  "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "start": "node app"
+  },
   "dependencies": {
-    "express": "3.x"
+    "express": "3.0.3",
+    "ejs": "*",
+    "stylus": "*"
   }
 }
