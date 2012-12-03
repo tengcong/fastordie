@@ -1,8 +1,3 @@
-
-/**
- * Module dependencies.
- */
-
 var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
@@ -33,6 +28,8 @@ app.configure('development', function(){
 app.get('/', routes.index);
 // app.get('/users', user.list);
 
-http.createServer(app).listen(app.get('port'), function(){
+server = http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
+
+var io = require('socket.io').listen(server);
